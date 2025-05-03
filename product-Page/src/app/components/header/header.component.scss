@@ -1,0 +1,8 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  width: 100%; /* Make the header full width */
+  box-sizing: border-box; /* Include padding and border in width */
+}
