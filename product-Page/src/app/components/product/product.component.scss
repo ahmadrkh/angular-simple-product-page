@@ -1,0 +1,72 @@
+.example-card {
+  max-width: 90%; /* Make cards smaller */
+  margin: 0; /* Remove auto margin */
+}
+
+.mat-card-content {
+  padding: 10px; /* Reduce padding for compact spacing */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.mat-card-content p {
+  margin: 3px 0; /* Reduce spacing between paragraphs */
+  font-size: 12px; /* Smaller font size */
+  color: #555; /* Softer text color */
+}
+
+.mat-expansion-panel {
+  margin-top: 8px; /* Reduce spacing above the expansion panel */
+  border: 1px solid #ddd; /* Add a border for separation */
+  border-radius: 5px; /* Rounded corners for the panel */
+}
+
+.mat-expansion-panel-header {
+  font-weight: bold; /* Highlight the header */
+  color: #333; /* Darker text for better visibility */
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: space-between; /* Spread buttons evenly */
+  padding: 8px 10px; /* Reduce padding for compact spacing */
+  background-color: #f1f1f1; /* Light background for separation */
+  border-top: 1px solid #ddd; /* Add a border to separate actions */
+}
+
+.mat-card-actions button {
+  font-size: 12px; /* Smaller button font size */
+  color: #007bff; /* Primary color for buttons */
+  padding: 4px 8px; /* Reduce button size */
+}
+
+.mat-card-actions button mat-icon {
+  margin-right: 3px; /* Reduce spacing between icon and text */
+}
+
+.mat-card-title {
+  font-size: 14px; /* Smaller font size for titles */
+}
+
+.mat-card-subtitle {
+  font-size: 12px; /* Smaller font size for subtitles */
+}
+
+.mat-card-image {
+  max-height: 120px; /* Reduce image height */
+  object-fit: cover; /* Ensure images fit within the card */
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 products per row for tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 products per row for mobile */
+  }
+}
