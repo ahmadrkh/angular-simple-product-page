@@ -1,16 +1,39 @@
 <mat-card class="example-card" appearance="outlined">
+  <div>
+    <img mat-card-image [src]="product.images[0]" [alt]="product.title" />
     <mat-card-header>
       <mat-card-title>{{ product.title }}</mat-card-title>
       <mat-card-subtitle>{{ product.brand }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="product.images[0]" [alt]="product.title" />
+  </div>
+  <div class="example-card-content">
     <mat-card-content>
-      <p>Price: ${{ product.price }}</p>
-      <p>Rating: {{ product.rating }}</p>
-      <p>Status: {{ product.availabilityStatus }}</p>
+      <p>
+        <mat-icon>attach_money</mat-icon>
+        Price: ${{ product.price }}
+      </p>
+      <p>
+        <mat-icon>star</mat-icon>
+        Rating: {{ product.rating }}
+      </p>
+      <p>
+        <mat-icon>info</mat-icon>
+        Status: {{ product.availabilityStatus }}
+      </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button><mat-icon>thumb_up</mat-icon> LIKE</button>
-      <button mat-button><mat-icon>share</mat-icon> SHARE</button>
+      <div class="example-button-container">
+        <button mat-fab extended>
+          <mat-icon>favorite</mat-icon>
+          Like
+        </button>
+        <button mat-fab extended>
+          <mat-icon>add</mat-icon>
+          Add
+        </button>
+      </div>
+      <!-- <button mat-button><mat-icon>thumb_up</mat-icon> LIKE</button>
+      <button mat-button><mat-icon>share</mat-icon> SHARE</button> -->
     </mat-card-actions>
-  </mat-card>
+  </div>
+</mat-card>

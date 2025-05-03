@@ -18,3 +18,10 @@
     grid-template-columns: repeat(2, 1fr); /* 2 products per row for mobile */
   }
 }
+
+@media (max-width: 360px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* Ensure 2 products per row */
+    gap: 5px; /* Reduce spacing between items */
+  }
+}

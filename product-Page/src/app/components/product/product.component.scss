@@ -1,72 +1,106 @@
 .example-card {
-  max-width: 90%; /* Make cards smaller */
+  min-height: 350px; /* Set minimum height */
+  // height: 350px; /* Ensure consistent height */
+  width: 140px; /* Set consistent width */
   margin: 0; /* Remove auto margin */
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically */
+  justify-content: space-between; /* Distribute content evenly */
 }
 
-.mat-card-content {
-  padding: 10px; /* Reduce padding for compact spacing */
-  background-color: #f9f9f9; /* Light background for contrast */
+mat-card {
+  min-height: 350px; /* Set minimum height */
+  height: 100%; /* Ensure card fills the container */
+}
+
+img {
+  border: 2px solid #ddd; /* Add a border around images */
+  max-width: 100%; /* Ensure images fit within the card */
+  object-fit: cover; /* Ensure images fit within the card */
+}
+
+mat-card-header {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 10px !important; /* Set font size */
+  padding: 20px 0px; /* Set padding to 0 */
+  padding-bottom: 0px;
   border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.mat-card-content p {
-  margin: 3px 0; /* Reduce spacing between paragraphs */
+mat-card-title {
+  font-size: 14px; /* Smaller font size */
+  font-weight: bold;
+}
+
+mat-card-subtitle {
   font-size: 12px; /* Smaller font size */
+  color: #888; /* Softer text color */
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  align-items: center; /* Center items vertically */
+  margin-top: 10px; /* Add spacing above buttons */
+}
+
+mat-card-content {
+  padding: 0; /* Add padding */
+}
+
+mat-card-actions {
+  padding: 0; /* Add padding */
+}
+
+mat-card-content p {
+  display: flex;
+  align-items: center; /* Center text vertically */
+  margin: 3px 0; /* Reduce spacing between paragraphs */
+  font-size: 12px; /* Set font size to 12px */
   color: #555; /* Softer text color */
 }
 
-.mat-expansion-panel {
-  margin-top: 8px; /* Reduce spacing above the expansion panel */
-  border: 1px solid #ddd; /* Add a border for separation */
-  border-radius: 5px; /* Rounded corners for the panel */
-}
-
-.mat-expansion-panel-header {
-  font-weight: bold; /* Highlight the header */
-  color: #333; /* Darker text for better visibility */
+.mat-mdc-card-content mat-icon {
+  width: 16px; /* Set icon size */
+  height: 16px; /* Set icon size */
+  font-size: 16px; /* Match icon size with text */
+  vertical-align: middle; /* Align icons with text */
+  margin-right: 5px; /* Add spacing between icon and text */
 }
 
 .mat-card-actions {
+  font-size: 10px;
   display: flex;
   justify-content: space-between; /* Spread buttons evenly */
-  padding: 8px 10px; /* Reduce padding for compact spacing */
   background-color: #f1f1f1; /* Light background for separation */
   border-top: 1px solid #ddd; /* Add a border to separate actions */
 }
 
-.mat-card-actions button {
-  font-size: 12px; /* Smaller button font size */
+.example-button-container button {
+  height: 40px; /* Smaller button height */
+  display: flex;
+  justify-content: center; /* Center button text */
+  align-items: center; /* Center button text */
+  font-size: 10px; /* Smaller button font size */
   color: #007bff; /* Primary color for buttons */
-  padding: 4px 8px; /* Reduce button size */
+  padding: 0px; /* Reduce button size */
 }
 
-.mat-card-actions button mat-icon {
+mat-card-actions button mat-icon {
+  width: 12px; /* Set icon size */
+  height: 12px; /* Set icon size */
+  display: flex;
+  align-items: center; /* Center icon vertically */
+  font-size: 12px;
   margin-right: 3px; /* Reduce spacing between icon and text */
 }
 
-.mat-card-title {
-  font-size: 14px; /* Smaller font size for titles */
-}
-
-.mat-card-subtitle {
-  font-size: 12px; /* Smaller font size for subtitles */
-}
-
-.mat-card-image {
-  max-height: 120px; /* Reduce image height */
-  object-fit: cover; /* Ensure images fit within the card */
-}
-
-/* Add media queries for responsiveness */
-@media (max-width: 1024px) {
-  .product-list {
-    grid-template-columns: repeat(3, 1fr); /* 3 products per row for tablets */
-  }
-}
-
-@media (max-width: 600px) {
-  .product-list {
-    grid-template-columns: repeat(2, 1fr); /* 2 products per row for mobile */
-  }
+.example-button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two buttons per row */
+  gap: 5px; /* Add spacing between buttons */
+  align-items: center; /* Center items vertically */
+  
+  width: 100%;
 }
