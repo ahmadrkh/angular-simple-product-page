@@ -1,0 +1,22 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  padding: 0 16px; /* Add padding */
+  background: #3f51b5; /* Primary color */
+  color: white; /* Text color */
+  font-size: large;
+  width: 100%; /* Make the header full width */
+}
+
+mat-icon {
+  color: white; /* Icon color */
+  font-size:large;
+  display: flex;
+  align-items: center; /* Center icon vertically */
+}

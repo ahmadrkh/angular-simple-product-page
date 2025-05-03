@@ -1,0 +1,9 @@
+<app-header></app-header>
+<div class="product-list">
+  <app-product
+    *ngFor="let product of products; trackBy: trackByProductId"
+    [product]="product"
+  ></app-product>
+</div>
+
+<router-outlet></router-outlet>
